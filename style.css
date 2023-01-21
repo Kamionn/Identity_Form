@@ -1,0 +1,226 @@
+/*Css By Kamion*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	min-height: 100vh;
+	background: #0c192c;
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+ 	 overflow: hidden; /* Hide scrollbars */
+
+}
+
+label {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+
+.container {
+	position: relative;
+	width: 100% auto;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.bubbles {
+	position: relative;
+	display: flex;
+}
+
+.bubbles span {
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background: #4fc3dc;
+	margin: 0 4px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 10px #4fc3dc44, 
+	0 0 50px #4fc3dc,
+	0 0 100px #4fc3dc;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(90s /var(--i))
+}
+
+.bubbles span:nth-child(even)
+{
+	background: #5ad0ad;
+	box-shadow: 0 0 0 10px #4fc3dc44,
+	0 0 50px #5ad0ad,
+	0 0 50px #5ad0ad;
+}
+
+@keyframes animate 
+{
+	0% {
+		transform: translateY(100vh) scale(0);
+	}
+	100% {
+		transform: translateY(-10vh) scale(1);
+	}
+}
+
+#kamion {
+	width: 450px;
+	margin: 350px auto;
+	text-align: center;
+	position: relative;
+}
+
+#kamion fieldset {
+	background: rgb(20, 40, 71);
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+
+#kamion fieldset:not(:first-of-type) {
+	display: none;
+}
+
+#kamion input, #kamion textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2c3e50fb;
+	font-size: 13px;
+}
+
+#kamion .action-button {
+	font-family: montserrat;
+	width: 100px;
+	background: #47a388;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 15px 5px;
+}
+#kamion .action-button:hover, #kamion .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #6091d5;
+}
+
+.p-t-15 {
+	padding-top: 15px;
+}
+   
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #4fc3dc;
+	margin-bottom: 20px;
+}
+
+
+.checkbox-container {
+	display: inline-block;
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #2f7a8b;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+   }
+   
+   .checkbox-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+   }
+   
+   .checkbox-container input:checked ~ .checkmark {
+	background-color: #e5e5e5;
+   }
+   
+   .checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+   }
+   
+   .checkbox-container .checkmark:after {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 12px;
+	height: 12px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #4fc3dc;
+   }
+   
+   .checkmark {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #e5e5e5;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+	-moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+   }
+   
+   .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+   }
+   
+   .input--style-5 {
+	background: #e5e5e5;
+	line-height: 50px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 0 22px;
+	font-size: 16px;
+	color: #555;
+   }
+   
+   .input-group-desc {
+	position: relative;
+   }
+   
+   @media (max-width: 767px) {
+	.input-group-desc {
+	  margin-bottom: 40px;
+	}
+   }
+   @media (min-width: 600px) {
+	body {
+	  padding: 60px;
+	}
+   }
